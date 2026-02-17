@@ -283,23 +283,7 @@
                 fillColor: 'rgba(51,160,44,1.0)',
                 interactive: true,
             }
-                    break;
-                case 'Hotspot':
-                    return {
-                pane: 'pane_Observacions_3',
-                radius: 10.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(175,175,175,1.0)',
-                interactive: true,
-            }
-                    break;
+                     break;
                 case 'Aproximada':
                     return {
                 pane: 'pane_Observacions_3',
@@ -313,6 +297,22 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(251,247,21,1.0)',
+                interactive: true,
+            }
+				break;
+                case 'Hotspot':
+                    return {
+                pane: 'pane_Observacions_3',
+                radius: 10.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(175,175,175,1.0)',
                 interactive: true,
             }
                     break;
@@ -339,7 +339,7 @@
         bounds_group.addLayer(layer_Observacions_3);
         map.addLayer(layer_Observacions_3);
         var overlaysTree = [
-            {label: 'Observacions<br /><table><tr><td style="text-align: center;"><img src="legend/Observacions_3_Precisa0.png" /></td><td>Precisa</td></tr><tr><td style="text-align: center;"><img src="legend/Observacions_3_Hotspot1.png" /></td><td>Hotspot</td></tr><tr><td style="text-align: center;"><img src="legend/Observacions_3_Aproximada2.png" /></td><td>Aproximada</td></tr></table>', layer: layer_Observacions_3},
+            {label: 'Observacions<br /><table><tr><td style="text-align: center;"><img src="legend/Observacions_3_Precisa0.png" /></td><td>Precisa</td></tr><tr><td style="text-align: center;"><img src="legend/Observacions_3_Aproximada2.png" /></td><td>Aproximada</td></tr><tr><td style="text-align: center;"><img src="legend/Observacions_3_Hotspot1.png" /></td><td>Hotspot</td></tr></table>', layer: layer_Observacions_3},
             {label: '<img src="legend/Lmits_2.png" /> Límits', layer: layer_Lmits_2},
             {label: "Mapbox - Satellite", layer: layer_MapboxSatellite_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
@@ -524,7 +524,7 @@
             lab_Any.className = 'filterlabel';
             document.getElementById("menu").appendChild(lab_Any);
             var reset_Any = document.createElement('div');
-            reset_Any.innerHTML = 'clear filter';
+            reset_Any.innerHTML = 'netejar filtre';
             reset_Any.className = 'filterlabel';
             lab_Any.className = 'filterlabel';
             reset_Any.onclick = function() {
@@ -564,7 +564,7 @@
             lab_Mes.className = 'filterlabel';
             document.getElementById("menu").appendChild(lab_Mes);
             var reset_Mes = document.createElement('div');
-            reset_Mes.innerHTML = 'clear filter';
+            reset_Mes.innerHTML = 'netejar filtre';
             reset_Mes.className = 'filterlabel';
             lab_Mes.className = 'filterlabel';
             reset_Mes.onclick = function() {
@@ -719,7 +719,7 @@
             lab_Espcie.className = 'filterlabel';
             div_Espcie.appendChild(lab_Espcie);
             var reset_Espcie = document.createElement('div');
-            reset_Espcie.innerHTML = 'clear filter';
+            reset_Espcie.innerHTML = 'netejar filtre';
             reset_Espcie.className = 'filterlabel';
             reset_Espcie.onclick = function() {
                 var options = document.getElementById("sel_Espcie").options;
@@ -741,9 +741,9 @@
             sel_Tipusdedada.id = "sel_Tipusdedada";
             var Tipusdedada_options_str = "<option value='' unselected></option>";
             sel_Tipusdedada.onchange = function(){filterFunc()};
-            Tipusdedada_options_str  += '<option value="Aproximada">Aproximada</option>';
-            Tipusdedada_options_str  += '<option value="Hotspot">Hotspot</option>';
             Tipusdedada_options_str  += '<option value="Precisa">Precisa</option>';
+			Tipusdedada_options_str  += '<option value="Aproximada">Aproximada</option>';
+            Tipusdedada_options_str  += '<option value="Hotspot">Hotspot</option>';            
             sel_Tipusdedada.innerHTML = Tipusdedada_options_str;
             div_Tipusdedada.appendChild(sel_Tipusdedada);
             var lab_Tipusdedada = document.createElement('div');
@@ -751,7 +751,7 @@
             lab_Tipusdedada.className = 'filterlabel';
             div_Tipusdedada.appendChild(lab_Tipusdedada);
             var reset_Tipusdedada = document.createElement('div');
-            reset_Tipusdedada.innerHTML = 'clear filter';
+            reset_Tipusdedada.innerHTML = 'netejar filtre';
             reset_Tipusdedada.className = 'filterlabel';
             reset_Tipusdedada.onclick = function() {
                 var options = document.getElementById("sel_Tipusdedada").options;
